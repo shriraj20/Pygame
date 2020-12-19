@@ -20,8 +20,15 @@ display = pygame.display.set_mode((window_width, window_height))
 # pygame.mixer.init()
 
 pygame.mixer.music.load("Marshmello x Imanbek (Ft. Usher) - Too Much (Official Music Video).mp3")
+pygame.mixer.music.play(0)
+
+# if pygame.mixer.music.playing("Marshmello x Imanbek (Ft. Usher) - Too Much (Official Music Video).mp3"):
+#     pygame.mixer.music.pause("Club Penguin OST Dojo.mp3")
+#     pygame.mixer.music.pause("Marshmello - Alone (Official Music Video).mp3")
 #
-pygame.mixer.music.play(-1)
+# pygame.mixer.music.load("Club Penguin OST Dojo.mp3")
+# #
+# pygame.mixer.music.load("Marshmello - Alone (Official Music Video).mp3")
 
 # forever loop
 while True:
