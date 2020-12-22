@@ -1,5 +1,6 @@
 import pygame
 import sys
+from getkey import getkey, keys
 # import os
 # import pyglet
 # music = pyglet.resource.media('Marshmello x Imanbek (Ft. Usher) - Too Much (Official Music Video).mp3')
@@ -17,24 +18,27 @@ window_width = 400
 # creating window
 display = pygame.display.set_mode((window_width, window_height))
 
-# pygame.mixer.init()
+pygame.mixer.init()
 
 pygame.mixer.music.load("Marshmello x Imanbek (Ft. Usher) - Too Much (Official Music Video).mp3")
 pygame.mixer.music.play(0)
 
-# if pygame.mixer.music.playing("Marshmello x Imanbek (Ft. Usher) - Too Much (Official Music Video).mp3"):
-#     pygame.mixer.music.pause("Club Penguin OST Dojo.mp3")
-#     pygame.mixer.music.pause("Marshmello - Alone (Official Music Video).mp3")
-#
-# pygame.mixer.music.load("Club Penguin OST Dojo.mp3")
-# #
-# pygame.mixer.music.load("Marshmello - Alone (Official Music Video).mp3")
-
 # forever loop
 while True:
-    # os.system("aplay Marshmello x Imanbek (Ft. Usher) - Too Much (Official Music Video).mp3")
-    # print("hello")
-    # event loop
+    key = getkey()
+    if key == keys.UP:
+        ...  # Handle the UP key
+    elif key == keys.DOWN:
+        ...  # Handle the DOWN key
+    elif key == 'a':
+        pygame.mixer.music.pause()  # Handle the `a` key
+    elif key == 'Y':
+        ...  # Handle `shift-y`
+    else:
+        # Handle other text characters
+        buffer += key
+        print(buffer)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
